@@ -4,23 +4,22 @@ import (
 	"sync"
 )
 
-// SafeCounter is safe to use concurrently.
-type SafeCounter struct {
+// SafeInt64Counter is safe to use concurrently.
+type SafeFloat64Counter struct {
 	value float64
 	mux   sync.Mutex
 }
 
-// Inc increments the counter for the given key.
-func (c *SafeCounter) Inc(newValue int) {
+// Increment increments the counter for the given key.
+func (c *SafeFloat64Counter) Increment64(newValue float64) {
 	// Lock so only one goroutine at a time can access the map c.v.
 	c.mux.Lock()
 	defer c.mux.Unlock()
-	//fmt.Printf("Adding %v to sum : %f\n", newValue, c.value)
-	c.value += float64(newValue)
+	c.value += newValue
 }
 
 // Value returns the current value of the counter for the given key.
-func (c *SafeCounter) Value() float64 {
+func (c *SafeFloat64Counter) Value() float64 {
 	// Lock so only one goroutine at a time can access the map c.v.
 	c.mux.Lock()
 	defer c.mux.Unlock()
@@ -28,7 +27,7 @@ func (c *SafeCounter) Value() float64 {
 }
 
 // Value returns the current value of the counter for the given key.
-func (c *SafeCounter) Reset() {
+func (c *SafeFloat64Counter) Reset() {
 	// Lock so only one goroutine at a time can access the map c.v.
 	c.mux.Lock()
 	defer c.mux.Unlock()

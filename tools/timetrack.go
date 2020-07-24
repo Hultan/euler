@@ -1,11 +1,11 @@
 package tools
 
 import (
-	"log"
+	"fmt"
 	"time"
 )
 
-func TimeTrack(start time.Time, name string) {
+func TimeTrack(start time.Time) string {
 	elapsed := time.Since(start)
-	log.Printf("%s took %s", name, elapsed)
+	return fmt.Sprintf("time : %s", elapsed)
 }
