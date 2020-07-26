@@ -3,8 +3,8 @@ package tools
 import "math"
 
 type PrimeFactor struct {
-
 }
+
 func NewPrimeFactors() *PrimeFactor {
 	return new(PrimeFactor)
 }
