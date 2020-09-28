@@ -2,7 +2,7 @@ package problems
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	"github.com/hultan/euler/internal/tools"
 	"math/big"
 	"time"
 )
@@ -50,7 +50,7 @@ func (e *Euler010) Solve() string {
 
 	answer += 5 // 2 and 3
 
-	time:=tools.TimeTrack(start)
+	time:= tools.TimeTrack(start)
 	e.Answer = fmt.Sprintf("%v (%s)", answer, time)
 
 	return e.Answer

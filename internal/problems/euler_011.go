@@ -2,7 +2,7 @@ package problems
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	"github.com/hultan/euler/internal/tools"
 	"time"
 )
 
@@ -91,7 +91,7 @@ func (e *Euler011) Solve() string {
 	}
 
 	answer = maxProduct
-	time:=tools.TimeTrack(start)
+	time:= tools.TimeTrack(start)
 	e.Answer = fmt.Sprintf("%v (%s)", answer, time)
 
 	return e.Answer

@@ -2,7 +2,7 @@ package problems
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	"github.com/hultan/euler/internal/tools"
 	"time"
 )
 

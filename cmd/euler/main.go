@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/hultan/euler/problems"
+	"github.com/hultan/euler/internal/problems"
 )
 import "fmt"
 
@@ -19,7 +19,7 @@ func main() {
 	}
 }
 
-func getProblem(number int) problems.Problem  {
+func getProblem(number int) problems.Problem {
 	switch number {
 	case 1:
 		return problems.NewEuler001()
