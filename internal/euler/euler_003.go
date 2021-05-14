@@ -1,8 +1,8 @@
-package problems
+package euler
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	tools2 "github.com/hultan/euler/internal/tools"
 	"time"
 )
 
@@ -37,11 +37,11 @@ func (e *Euler003) Solve() string {
 	start:=time.Now()
 	var answer uint64 = 0
 
-	primeFactor := tools.NewPrimeFactors()
+	primeFactor := tools2.NewPrimeFactors()
 	factors := primeFactor.GetPrimeFactors(600851475143)
 	answer = factors[len(factors)-1]
 
-	time:=tools.TimeTrack(start)
+	time:= tools2.TimeTrack(start)
 	e.Answer = fmt.Sprintf("%v (%s)", answer, time)
 
 	return e.Answer

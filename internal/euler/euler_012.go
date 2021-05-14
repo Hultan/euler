@@ -1,8 +1,8 @@
-package problems
+package euler
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	tools2 "github.com/hultan/euler/internal/tools"
 	"time"
 )
 
@@ -39,7 +39,7 @@ func (e *Euler012) Solve() string {
 	var count uint64 = 0
 	var triangleNumber uint64 = 0
 	var divisors int = 0
-	divisorTool := tools.NewDivisors()
+	divisorTool := tools2.NewDivisors()
 
 	for divisors < 500 {
 		count++
@@ -48,7 +48,7 @@ func (e *Euler012) Solve() string {
 	}
 
 	answer = triangleNumber
-	time := tools.TimeTrack(start)
+	time := tools2.TimeTrack(start)
 	e.Answer = fmt.Sprintf("%v (%s)", answer, time)
 
 	return e.Answer

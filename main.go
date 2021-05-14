@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/hultan/euler/problems"
+	euler2 "github.com/hultan/euler/internal/euler"
 )
 import "fmt"
 
@@ -19,32 +19,32 @@ func main() {
 	}
 }
 
-func getProblem(number int) problems.Problem  {
+func getProblem(number int) euler2.Problem {
 	switch number {
 	case 1:
-		return problems.NewEuler001()
+		return euler2.NewEuler001()
 	case 2:
-		return problems.NewEuler002()
+		return euler2.NewEuler002()
 	case 3:
-		return problems.NewEuler003()
+		return euler2.NewEuler003()
 	case 4:
-		return problems.NewEuler004()
+		return euler2.NewEuler004()
 	case 5:
-		return problems.NewEuler005()
+		return euler2.NewEuler005()
 	case 6:
-		return problems.NewEuler006()
+		return euler2.NewEuler006()
 	case 7:
-		return problems.NewEuler007()
+		return euler2.NewEuler007()
 	case 8:
-		return problems.NewEuler008()
+		return euler2.NewEuler008()
 	case 9:
-		return problems.NewEuler009()
+		return euler2.NewEuler009()
 	case 10:
-		return problems.NewEuler010()
+		return euler2.NewEuler010()
 	case 11:
-		return problems.NewEuler011()
+		return euler2.NewEuler011()
 	case 12:
-		return problems.NewEuler012()
+		return euler2.NewEuler012()
 	default:
 		return nil
 	}

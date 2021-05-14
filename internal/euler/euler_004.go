@@ -1,8 +1,8 @@
-package problems
+package euler
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	tools2 "github.com/hultan/euler/internal/tools"
 	"time"
 )
 
@@ -39,7 +39,7 @@ func (e *Euler004) Solve() string {
 	var maxPalindrome int64
 	var i,j int64
 
-	t := tools.NewNumberFunctions()
+	t := tools2.NewNumberFunctions()
 
 	for i=999;i>2;i-- {
 		for j=i-1;j>1;j-- {
@@ -51,7 +51,7 @@ func (e *Euler004) Solve() string {
 		}
 	}
 
-	time:=tools.TimeTrack(start)
+	time:= tools2.TimeTrack(start)
 	e.Answer = fmt.Sprintf("%v (%s)", maxPalindrome, time)
 
 	return e.Answer

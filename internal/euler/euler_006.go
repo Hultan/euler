@@ -1,8 +1,8 @@
-package problems
+package euler
 
 import (
 	"fmt"
-	"github.com/hultan/euler/tools"
+	tools2 "github.com/hultan/euler/internal/tools"
 	"time"
 )
 
@@ -48,7 +48,7 @@ func (e *Euler006) Solve() string {
 	squareOfSums *= squareOfSums
 	answer = squareOfSums - sumOfSquares
 
-	time := tools.TimeTrack(start)
+	time := tools2.TimeTrack(start)
 	e.Answer = fmt.Sprintf("%v (%s)", answer, time)
 
 	return e.Answer

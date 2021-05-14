@@ -1,4 +1,4 @@
-package problems
+package euler
 
 type Problem interface {
 	PrintDescription()
