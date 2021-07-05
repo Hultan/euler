@@ -1,7 +1,11 @@
 package main
 
 import (
+<<<<<<< HEAD:main.go
 	euler2 "github.com/hultan/euler/internal/euler"
+=======
+	"github.com/hultan/euler/internal/problems"
+>>>>>>> bfd95881f1c854e1634d0acbc087d5e4994b7147:cmd/euler/main.go
 )
 import "fmt"
 
@@ -19,7 +23,11 @@ func main() {
 	}
 }
 
+<<<<<<< HEAD:main.go
 func getProblem(number int) euler2.Problem {
+=======
+func getProblem(number int) problems.Problem {
+>>>>>>> bfd95881f1c854e1634d0acbc087d5e4994b7147:cmd/euler/main.go
 	switch number {
 	case 1:
 		return euler2.NewEuler001()
