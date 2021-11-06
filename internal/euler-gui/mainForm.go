@@ -1,13 +1,15 @@
 package euler_gui
 
 import (
-	"github.com/gotk3/gotk3/gtk"
-	"github.com/hultan/gtk-startup/pkg/tools"
 	"os"
+
+	"github.com/gotk3/gotk3/gtk"
+
+	"github.com/hultan/gtk-startup/pkg/tools"
 )
 
 const applicationTitle = "euler-gui"
-const applicationVersion = "v 0.01"
+const applicationVersion = "v 0.02"
 const applicationCopyRight = "©SoftTeam AB, 2021"
 
 type MainForm struct {
