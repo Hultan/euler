@@ -9,7 +9,7 @@ import (
 )
 
 const applicationTitle = "euler-gui"
-const applicationVersion = "v 0.02"
+const applicationVersion = "v0.0.2"
 const applicationCopyRight = "©SoftTeam AB, 2021"
 
 type MainForm struct {
